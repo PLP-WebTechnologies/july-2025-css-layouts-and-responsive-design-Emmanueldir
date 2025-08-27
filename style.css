@@ -1,0 +1,149 @@
+/* universal reset */
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header styling */
+h1 {
+    padding: 0.4rem;
+    background-color: #9112BC;
+    color: white;
+    text-align: center;
+}
+
+/* nav link style */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+li a{
+    padding: 1rem;
+    text-decoration: none;
+    color: #F4F4F6;
+    
+}
+
+li a:active, a:hover {
+    background-color: #AE75DA;
+    color: white;
+}
+
+.navbar{
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #9112BC;
+}
+
+body {
+    display: block;
+    margin: 0rem;
+    font: 20px Arial, Helvetica, sans-serif;
+    /* padding: 0.3rem; */
+}
+
+/* grid container */
+.area {
+    display: grid;
+    grid-template-columns:15% 85%;
+    gap: 10px;
+    padding: 0rem;
+    height: fit-content;
+    justify-content: center;
+    align-content: center;
+}
+
+/* sidebar style */
+.sidebar {
+    text-align: center;
+    padding: 0.7rem;
+}
+
+/* main content area */
+.content > h3 {
+    text-align: center;
+}
+
+.content {
+    padding: 1rem;
+}
+
+/* foot styles */
+footer {
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    color: #E6E6E9;
+    background-color: #37353E;
+}
+
+footer > a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer a:hover {
+    color: lightblue;
+    background-color: #37353E;
+}
+
+/* media queries for responsive design */
+/* mobile phone screen */
+@media screen and (max-width: 600px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    li a{
+        padding: 0.3rem;
+    }
+
+    .area {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .content > h3 {
+        padding: 10px;
+    }
+}
+
+/* tablet screen - all sizes before 1024px*/
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    li a{
+        padding: 0.3rem;
+    }
+
+    .area {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0px;
+    }
+
+    .content {
+        border: 1px, solid;
+        padding-right: 2px;
+    }
+
+    .sidebar {
+        text-align: left;
+        border: 1px, solid;
+    }
+}
+
+/* other screen sizes takes the default style */
